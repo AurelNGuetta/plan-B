@@ -1,7 +1,7 @@
 new Vue({
   el: "#commande",
   data: {
-    oda: "Une École du code, centre à vocation technologique qui propose des formations et des animations.",
+    oda: "Orange digital Academy est une École du code, centre à vocation technologique qui propose des formations et des animations.",
     odc: "Orange Digital Center est un centre d’accompagnement et de développement des compétences numériques. De la formation au codage à la création d’entreprise, il couvre un large champ d’activités. Gratuits et ouverts à tous, ce centre fonde l’apprentissage sur des projets concrets.",
     fab: "Orange Fab est un accélérateur de start-up qui accompagne les jeunes pousses et leur permet de développer des partenariats commerciaux nationaux et internationaux avec une ou plusieurs entités du Groupe.",
     fabLab: "FabLab est un atelier de fabrication numérique qui permet de prototyper les projets et d’apprendre en pratiquant.",
@@ -26,7 +26,7 @@ new Vue({
     speechODA() {
         self = this,
       axios
-        .get("http://10.3.141.1:6400/api/section/" + self.oda)
+        .all(axios.get("http://10.3.141.1:6400/api/section/oda"),axios.get("http://10.3.141.1:6400/api/parler/" + self.oda))
         .then(function (response) {
           console.log(response);
         });
@@ -34,7 +34,7 @@ new Vue({
     speechFAB() {
         self = this,
       axios
-        .get("http://10.3.141.1:6400/api/section/" + self.fab)
+      .all(axios.get("http://10.3.141.1:6400/api/section/fab"),axios.get("http://10.3.141.1:6400/api/parler/" + self.fab))
         .then(function (response) {
           console.log(response);
         });
@@ -42,7 +42,7 @@ new Vue({
     BjrLatif() {
         self = this,
         axios
-          .get("http://10.3.141.1:6400/api/section/bonjour latifate")
+          .get("http://10.3.141.1:6400/api/parler/bonjour latifate")
           .then(function (response) {
             console.log(response);
           });
@@ -50,7 +50,7 @@ new Vue({
     speechFABLAB() {
         self = this,
       axios
-        .get("http://10.3.141.1:6400/api/section/"  + self.fabLab)
+      .all(axios.get("http://10.3.141.1:6400/api/section/fablab"),axios.get("http://10.3.141.1:6400/api/parler/"  + self.fabLab))
         .then(function (response) {
           console.log(response);
         });
@@ -58,7 +58,7 @@ new Vue({
     speechODC() {
         self = this,
       axios
-        .get("http://10.3.141.1:6400/api/section/" + self.odc)
+      .all(axios.get("http://10.3.141.1:6400/api/section/odc"),axios.get("http://10.3.141.1:6400/api/parler/" + self.odc))
         .then(function (response) {
           console.log(response);
         });
@@ -81,7 +81,9 @@ new Vue({
     },
     speechVENTURES() {
         self = this,
-        axios.get("http://10.3.141.1:6400/api/section/" + self.ventures).then(function (response) {
+        axios
+        .all(axios.get("http://10.3.141.1:6400/api/section/ventures"),axiosaxios.get("http://10.3.141.1:6400/api/parler/" + self.ventures))
+        .then(function (response) {
           console.log(response);
         });
       },
