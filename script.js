@@ -10,6 +10,7 @@ new Vue({
 
   methods: {
     speechPERSONEL() {
+        self = this,
       axios
         .get("http://10.3.141.1:6400/api/personnel")
         .then(function (response) {
@@ -17,11 +18,13 @@ new Vue({
         });
     },
     bonjour() {
+        self = this,
       axios.get("http://10.3.141.1:6400/api/start").then(function (response) {
         console.log(response);
       });
     },
     speechODA() {
+        self = this,
       axios
         .get("http://10.3.141.1:6400/api/section/" + self.oda)
         .then(function (response) {
@@ -29,6 +32,7 @@ new Vue({
         });
     },
     speechFAB() {
+        self = this,
       axios
         .get("http://10.3.141.1:6400/api/section/" + self.fab)
         .then(function (response) {
@@ -36,6 +40,7 @@ new Vue({
         });
     },
     BjrLatif() {
+        self = this,
         axios
           .get("http://10.3.141.1:6400/api/section/bonjour latifate")
           .then(function (response) {
@@ -43,6 +48,7 @@ new Vue({
           });
       },
     speechFABLAB() {
+        self = this,
       axios
         .get("http://10.3.141.1:6400/api/section/"  + self.fabLab)
         .then(function (response) {
@@ -50,13 +56,31 @@ new Vue({
         });
     },
     speechODC() {
+        self = this,
       axios
         .get("http://10.3.141.1:6400/api/section/" + self.odc)
         .then(function (response) {
           console.log(response);
         });
     },
+    musicOn() {
+        self = this,
+      axios
+        .get("http://10.3.141.1:6400/api/sound/on")
+        .then(function (response) {
+          console.log(response);
+        });
+    },
+    musicOff() {
+        self = this,
+      axios
+        .get("http://10.3.141.1:6400/api/sound/off")
+        .then(function (response) {
+          console.log(response);
+        });
+    },
     speechVENTURES() {
+        self = this,
         axios.get("http://10.3.141.1:6400/api/section/" + self.ventures).then(function (response) {
           console.log(response);
         });
