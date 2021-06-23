@@ -66,7 +66,7 @@ new Vue({
     musicOn() {
         self = this,
       axios
-        .get("http://10.3.141.1:6400/api/sound/on")
+        .get("http://10.3.141.1:6400/api/song/on")
         .then(function (response) {
           console.log(response);
         });
@@ -74,7 +74,7 @@ new Vue({
     musicOff() {
         self = this,
       axios
-        .get("http://10.3.141.1:6400/api/sound/off")
+        .get("http://10.3.141.1:6400/api/song/off")
         .then(function (response) {
           console.log(response);
         });
