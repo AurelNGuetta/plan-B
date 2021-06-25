@@ -21,7 +21,7 @@ new Vue({
     },
     bonjour() {
       (self = this),
-        axios.get("http://10.3.141.1:6400/api/start").then(function (response) {
+        axios.get("http://10.3.141.1:6400/parler/Bonjour").then(function (response) {
           console.log(response);
         });
     },
@@ -50,15 +50,43 @@ new Vue({
     BjrLatif() {
       (self = this),
         axios
-          .get("http://10.3.141.1:6400/api/parler/bonjour latifate")
+          .get("http://10.3.141.1:6400/api/parler/bonjour latifate, vous  êtes belle ce matin")
           .then(function (response) {
             console.log(response);
           });
     },
+
+    ccmt() {
+      (self = this),
+        axios
+          .get("http://10.3.141.1:6400/api/parler/je vais bien, que puis-je faire pour toi !")
+          .then(function (response) {
+            console.log(response);
+          });
+    },
+
+    jetempris() {
+      (self = this),
+        axios
+          .get("http://10.3.141.1:6400/api/parler/je t'en pris !")
+          .then(function (response) {
+            console.log(response);
+          });
+    },
+
     UseHabib() {
       (self = this),
         axios
           .get("http://10.3.141.1:6400/api/parler/bonjour habib bamba")
+          .then(function (response) {
+            console.log(response);
+          });
+    },
+    presenteTelo()
+    {
+      (self = this),
+        axios
+          .get("http://10.3.141.1:6400/api/parler/Je suis télo, votre Assistant pour vous guider !")
           .then(function (response) {
             console.log(response);
           });
@@ -78,6 +106,17 @@ new Vue({
         axios
           .get(
             "http://10.3.141.1:6400/api/parler/J'ai un soucis avec les noms , pouvez vous selectionner la personne souhaitée sur la tablette ?"
+          )
+          .then(function (response) {
+            console.log(response);
+            self.speechPERSONEL();
+          });
+    },
+    enchante() {
+      (self = this),
+        axios
+          .get(
+            "http://10.3.141.1:6400/api/parler/Enchanté , que puis-je faire pour vous ?"
           )
           .then(function (response) {
             console.log(response);

@@ -13,9 +13,19 @@
   </head>
   <body>
     <div class="row" id="commande">
-      <h1>Commande du vocale</h1>
+
+      <h1>simplo</h1>
       <div>
+      
+        <button class="btn btn-primary" type="button" v-on:click="presenteTelo()">presente toi telo</button>
+        <button class="btn btn-primary" type="button" v-on:click="repBonjour()">
+          Répondre au bonjour
+        </button>
         <button class="btn btn-primary" type="button" v-on:click="bonjour()">Dire bonjour</button>
+        </div>
+      <h1>pour lui</h1>
+      <div>
+        
         <button class="btn btn-primary" type="button" v-on:click="speechODA()">Parler de l'ODA</button>
         <button class="btn btn-primary" type="button" v-on:click="speechFAB()">Parler du fab</button>
         <button class="btn btn-primary" type="button" v-on:click="speechFABLAB()">Parler du fablab</button>
@@ -26,28 +36,27 @@
         <button class="btn btn-primary" type="button" v-on:click="speechPERSONEL()">
           Afficher le personnel
         </button>
-        <button class="btn btn-primary" type="button" v-on:click="StopSpeech()">STOP Vocale</button>
+        
+        
+        
+
       </div>
-      <h1>Commande de la reconnaissance faciale</h1>
+
+      <h1>Pour latiti</h1>
       <div>
-        <button class="btn btn-primary" type="button" v-on:click="UseHabib()">
-          Dire Bonjour Habib Bamba
-        </button>
         <button class="btn btn-primary" type="button" v-on:click="BjrLatif()">
           Dire Bonjour Latifate
         </button>
-      </div>
-
-      <h1>Réponse Robot</h1>
-      <div>
-        <button class="btn btn-primary" type="button" v-on:click="repBonjour()">
-          Répondre au bonjour
-        </button>
+        <button class="btn btn-primary" type="button" v-on:click="ccmt()">repondre a comment tu vas</button>
+        <button class="btn btn-primary" type="button" v-on:click="jetenpris()">je t'en pris</button>
         <button class="btn btn-primary" type="button" v-on:click="enchante()">
           Enchanté que puis-je faire pour vous ?
         </button>
         <button class="btn btn-primary" type="button" v-on:click="blemName()">
           Probleme avec les noms
+        </button>
+        <button class="btn btn-primary" type="button" v-on:click="blemName()">
+          desolé, je n'est  pas compris ce que vous avez dit !!
         </button>
       </div>
 
@@ -60,6 +69,15 @@
           etteindre la musique
         </button>
       </div>
+
+      <h1>Commande de la reconnaissance faciale</h1>
+      <div>
+        <button class="btn btn-primary" type="button" v-on:click="UseHabib()">
+          Dire Bonjour Habib Bamba
+        </button>
+
+      </div>
+      <button class="btn btn-primary" type="button" v-on:click="StopSpeech()">STOP Vocale</button>
 
       <h1>Commande de déplacement du robot</h1>
       <div>
